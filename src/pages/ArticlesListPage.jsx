@@ -1,7 +1,7 @@
 const ArticlesListPage = () => {
   return (
     <div>
-      <h1>Thi is a Article Page</h1>
+      <h1>Thi is a Articles list Page</h1>
     </div>
   );
 };

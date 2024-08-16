@@ -1,21 +1,23 @@
 import "./App.css";
+
 import HomePage from "./pages/HomePage";
-import AboutPage from "./pages/HomePage";
-import ArticlePage from "./pages/HomePage";
-import ArticlesListPage from "./pages/HomePage";
-import NotFoundPage from "./pages/HomePage";
+import AboutPage from "./pages/AboutPage";
+import ArticlePage from "./pages/ArticlePage";
+import ArticlesListPage from "./pages/ArticlesListPage";
+import NotFoundPage from "./pages/NotFoundPage";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import NavBar from "./NavBar";
 function App() {
   return (
     <BrowserRouter>
       <div className="App">
-        <h1>My Awesome Blog </h1>
+        <NavBar />
         <div id="page-body">
           <Routes>
             <Route path="/" element={<HomePage />} />
             <Route path="/about" element={<AboutPage />} />
-            <Route path="/article" element={<ArticlePage />} />
-            <Route path="/articleslit" element={<ArticlesListPage />} />
+            <Route path="/article/:artcleId" element={<ArticlePage />} />
+            <Route path="/articles" element={<ArticlesListPage />} />
             <Route path="/notfound" element={<NotFoundPage />} />
           </Routes>
         </div>
